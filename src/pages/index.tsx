@@ -12,7 +12,7 @@ import easyMess from "assets/images/easy-mess.png";
 
 const RootStack = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div style={{ display: "flex", background: "#222", minHeight: "100vh" }}>
         <div
           style={{
