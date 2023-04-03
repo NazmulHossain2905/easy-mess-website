@@ -14,9 +14,7 @@ const Users = () => {
   const [allUser, setAllUser] = useState(data?.users);
 
   useEffect(() => {
-    if (!data?.users.length) {
-      dispatch(getUsers());
-    }
+    dispatch(getUsers());
   }, []);
   useEffect(() => {
     if (data) {
