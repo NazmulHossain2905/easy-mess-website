@@ -97,14 +97,14 @@ const Users = () => {
       </div>
 
       <Flex direction="row" justify="space-around">
-        <Total label="Total Users" count={totalUser} />
         <Total label="Total Mess" count={totalMess} />
+        <Total label="Total Users" count={totalUser} />
         <Total
           label="Verified User"
           count={users.filter((user) => user.emailVerified).length}
         />
         <Total
-          label="Unverified Users"
+          label="Not Verified Users"
           count={users.filter((user) => !user.emailVerified).length}
           labelStyle={{ color: theme.colors.error }}
         />

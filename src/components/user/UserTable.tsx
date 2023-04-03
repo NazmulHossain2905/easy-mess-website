@@ -130,7 +130,10 @@ const UserTable: React.FC<UserTableProps> = ({ users }) => {
               <img src={user.avatar} alt={user.name} style={avatarStyle} />
             </td>
             <td style={{ ...tableCellStyle, fontWeight: "bold" }}>
-              {user.name}
+              {user.name} <br />
+              <p style={{ fontWeight: "normal", textTransform: "capitalize" }}>
+                {user?.role}
+              </p>
             </td>
             <td style={tableCellStyle}>{user.email}</td>
             <td style={tableCellStyle}>{user.phone}</td>
