@@ -1,0 +1,19 @@
+.nav-link {
+  text-decoration: none;
+  margin: 10px 13px 10px 13px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+  border-right: 2px solid #00000000;
+  border-radius: 5px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #03efff;
+}
+
+.nav-link:hover {
+  border-right: 2px solid #03efff;
+  color: #03efff;
+}
