@@ -7,6 +7,17 @@ import Container from "./Container";
 import Total from "./Total";
 import Flex from "./Flex";
 import PageLoading from "./PageLoading";
+import Input from "./Input";
 
 // Export
-export { Space, Flex, Button, Image, Total, Avatar, Container, PageLoading };
+export {
+  Space,
+  Input,
+  Flex,
+  Button,
+  Image,
+  Total,
+  Avatar,
+  Container,
+  PageLoading,
+};

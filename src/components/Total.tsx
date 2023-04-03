@@ -7,9 +7,17 @@ type TotalProps = {
   count: number | string;
   label: string;
   style?: React.CSSProperties;
+  labelStyle?: React.CSSProperties;
+  countStyle?: React.CSSProperties;
 };
 
-const Total: React.FC<TotalProps> = ({ count, label, style }) => {
+const Total: React.FC<TotalProps> = ({
+  count,
+  label,
+  style,
+  labelStyle,
+  countStyle,
+}) => {
   return (
     <div
       style={{
@@ -26,8 +34,10 @@ const Total: React.FC<TotalProps> = ({ count, label, style }) => {
         ...style,
       }}
     >
-      <h1 style={{ color: theme.colors.header_dark }}>{count}</h1>
-      <h3 style={{ color: theme.colors.success }}>{label}</h3>
+      <h1 style={{ color: theme.colors.header_dark, ...countStyle }}>
+        {count}
+      </h1>
+      <h3 style={{ color: theme.colors.success, ...labelStyle }}>{label}</h3>
     </div>
   );
 };

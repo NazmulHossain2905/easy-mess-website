@@ -8,6 +8,7 @@ import { Avatar } from "components";
 import { theme } from "styles/theme";
 import Home from "./Home";
 import PageNotFound from "./PageNotFound";
+import easyMess from "assets/images/easy-mess.png";
 
 const RootStack = () => {
   return (
@@ -19,6 +20,10 @@ const RootStack = () => {
             flex: 1,
             maxHeight: "100vh",
             overflow: "auto",
+            position: "fixed",
+            bottom: 0,
+            top: 0,
+            width: 220,
           }}
         >
           <div
@@ -33,7 +38,7 @@ const RootStack = () => {
               borderBottomStyle: "solid",
             }}
           >
-            <Avatar />
+            <Avatar source={easyMess} />
             <h2 style={{ color: theme.colors.primary, fontWeight: "bolder" }}>
               Easy Mess
             </h2>
@@ -44,6 +49,7 @@ const RootStack = () => {
           style={{
             background: theme.colors.white,
             flex: 5.5,
+            marginLeft: 220,
           }}
         >
           <Routes>

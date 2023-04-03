@@ -84,7 +84,9 @@
 // };
 
 import { IUser } from "interfaces/IUser";
+import moment from "moment";
 import React from "react";
+import { theme } from "styles/theme";
 
 interface UserTableProps {
   users: IUser[];
@@ -99,18 +101,45 @@ const UserTable: React.FC<UserTableProps> = ({ users }) => {
           <th style={tableHeaderCellStyle}>Name</th>
           <th style={tableHeaderCellStyle}>Email</th>
           <th style={tableHeaderCellStyle}>Phone</th>
+          <th style={tableHeaderCellStyle}>Date</th>
           <th style={tableHeaderCellStyle}>Verified</th>
         </tr>
       </thead>
       <tbody>
         {users.map((user, index) => (
-          <tr key={index} style={tableRowStyle}>
-            <td style={avatarCellStyle}>
+          <tr
+            key={index}
+            style={{
+              ...tableRowStyle,
+              backgroundColor: index % 2 === 1 ? "#f1f1f1" : "#fff",
+            }}
+          >
+            <td style={{ ...avatarCellStyle, position: "relative" }}>
+              <p
+                style={{
+                  fontSize: 11,
+                  color: theme.colors.success,
+                  position: "absolute",
+                  fontWeight: "bold",
+                  top: 5,
+                  left: 5,
+                }}
+              >
+                {++index}
+              </p>
               <img src={user.avatar} alt={user.name} style={avatarStyle} />
             </td>
-            <td style={tableCellStyle}>{user.name}</td>
+            <td style={{ ...tableCellStyle, fontWeight: "bold" }}>
+              {user.name}
+            </td>
             <td style={tableCellStyle}>{user.email}</td>
             <td style={tableCellStyle}>{user.phone}</td>
+            <td style={tableCellStyle}>
+              {/* {moment(user?.createdAt).format("DD-MM-YYYY")} <br /> */}
+              <span style={{ fontWeight: "normal" }}>
+                {moment(user?.createdAt).format("LLLL")}
+              </span>
+            </td>
             <td style={tableCellStyle}>
               {user.emailVerified ? (
                 <span style={verifiedStyle}>Yes</span>
@@ -148,14 +177,17 @@ const tableHeaderCellStyle: React.CSSProperties = {
 };
 
 const tableRowStyle: React.CSSProperties = {
-  backgroundColor: "#FFF",
   borderBottom: "1px solid #DDD",
   transition: "background-color 0.2s ease",
 };
 
 const tableCellStyle: React.CSSProperties = {
-  color: "#555",
+  color: "#333",
   padding: "12px 15px",
+  // fontWeight: "bold",
+  borderWidth: 1,
+  borderColor: "#ddd",
+  borderStyle: "solid",
 };
 
 const avatarCellStyle: React.CSSProperties = {
@@ -172,7 +204,7 @@ const avatarStyle: React.CSSProperties = {
 };
 
 const verifiedStyle: React.CSSProperties = {
-  backgroundColor: "#4CAF50",
+  backgroundColor: theme.colors.success,
   borderRadius: "5px",
   color: "#FFF",
   display: "inline-block",
@@ -181,7 +213,7 @@ const verifiedStyle: React.CSSProperties = {
 };
 
 const notVerifiedStyle: React.CSSProperties = {
-  backgroundColor: "#F44336",
+  backgroundColor: theme.colors.error,
   borderRadius: "5px",
   color: "#FFF",
   display: "inline-block",
