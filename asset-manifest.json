@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa9293fa.css",
-    "main.js": "/static/js/main.e7d5ff42.js",
-    "static/js/787.8e4b1634.chunk.js": "/static/js/787.8e4b1634.chunk.js",
-    "static/media/easy-mess.png": "/static/media/easy-mess.6299a1f4b8e5d8f4b1d4.png",
-    "index.html": "/index.html",
-    "main.aa9293fa.css.map": "/static/css/main.aa9293fa.css.map",
-    "main.e7d5ff42.js.map": "/static/js/main.e7d5ff42.js.map",
-    "787.8e4b1634.chunk.js.map": "/static/js/787.8e4b1634.chunk.js.map"
+    "main.css": "/easy-mess-website/static/css/main.aa9293fa.css",
+    "main.js": "/easy-mess-website/static/js/main.bc2793ed.js",
+    "static/js/787.8e4b1634.chunk.js": "/easy-mess-website/static/js/787.8e4b1634.chunk.js",
+    "static/media/easy-mess.png": "/easy-mess-website/static/media/easy-mess.6299a1f4b8e5d8f4b1d4.png",
+    "index.html": "/easy-mess-website/index.html",
+    "main.aa9293fa.css.map": "/easy-mess-website/static/css/main.aa9293fa.css.map",
+    "main.bc2793ed.js.map": "/easy-mess-website/static/js/main.bc2793ed.js.map",
+    "787.8e4b1634.chunk.js.map": "/easy-mess-website/static/js/787.8e4b1634.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa9293fa.css",
-    "static/js/main.e7d5ff42.js"
+    "static/js/main.bc2793ed.js"
   ]
 }
